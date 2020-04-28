@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#pragma pack(1);
 using namespace std;
 
 struct data1 
@@ -23,8 +24,8 @@ struct data4
 {
   char arr[100];  
   int x;    
-}d4;
 
+}d4;
 int main() 
 { 
   cout << "Size of struct 1: " <<  sizeof(d1); 
