@@ -6,19 +6,25 @@ struct EMP {
 
 	EMP *next, *prev;
 };
-EMP *head=NULL; EMP *tail=NULL;
+EMP *head=NULL;
+EMP *tail=NULL;
 int addNode() {
-
-	struct EMP current;
-	cout<<"Enter name: "; cin>>current.emp_name;
-	cout<<"Enter id: "; cin>>current.emp_id;
-	*tail = current;
 	if( head==NULL ) {
-		*head = current;
+		head = new EMP;
+		cout<<"Enter name: "; cin>>head->emp_name;
+		cout<<"Enter id: "; cin>>head->emp_id;
+		head->next = NULL;
+		head->prev = NULL;
+		tail = head;
 		return 1;
 	}
-	else
+	else{
+		struct EMP current;
+		while(head->next != NULL){
+			current = head->next;
+		}
 		return 2;
+	}
 }
 
 int main(){
